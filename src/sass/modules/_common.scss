@@ -1,0 +1,72 @@
+@use "modules/variables" as *;
+
+* {
+  font-family: "TT-Norms", sans-serif;
+  color: $text-color;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  // font-family: "Cocogoose-Narrow", sans-serif;
+  font-family: "Hurme Geometric Sans 3 W03 Bold";
+  // font-weight: medium;
+  // letter-spacing: 2px;
+  // line-height: 1.33;
+}
+
+// UTILS
+.stack {
+  display: flex;
+  flex-direction: column;
+
+  .gap {
+    &--sm {
+      gap: 12px;
+    }
+  }
+}
+
+.container {
+  max-width: $grid;
+  width: 90%;
+  margin: auto;
+}
+
+.text {
+  &--center {
+    text-align: center;
+  }
+}
+
+.border {
+  &--round {
+    border-radius: 20px;
+  }
+}
+
+.overflow {
+  &--hidden {
+    overflow: hidden;
+  }
+}
+
+.bg {
+  &--light1 {
+    background-color: $bg-color-light1;
+  }
+  &--light2 {
+    background-color: $bg-color-light2;
+  }
+  &--light3 {
+    background-color: $bg-color-light3;
+  }
+}

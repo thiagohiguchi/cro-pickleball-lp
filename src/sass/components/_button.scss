@@ -1,0 +1,36 @@
+@use "modules/variables" as *;
+@use "sass:color";
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 100px;
+  background-color: #05f;
+  color: #fff;
+  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: color.adjust($primary-color, $lightness: 15%);
+  }
+
+  &--outline {
+    background: transparent;
+    border: solid 1px #05f;
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+      border-color: color.adjust($primary-color, $lightness: 15%);
+      background-color: color.adjust($primary-color, $lightness: 15%);
+      color: #fff;
+    }
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}

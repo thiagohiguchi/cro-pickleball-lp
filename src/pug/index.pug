@@ -1,0 +1,29 @@
+extends ./layouts/_default.pug
+block variables
+	- var title = 'CRO Pickleball LP | Thiago Higuchi'
+	- var description = 'Test project using HTML, CSS, and JS'
+	- var author = 'Thiago Higuchi'
+	- var imgPrefixUrl = IMG_PREFIX_URL
+
+block content
+	include ./partials/_navbar.pug
+	main
+		section#hero
+			.container
+				.hero
+					.hero__highlight 
+						h1 You're invited to the 2025 ClassPass Pickleball Classic
+						p Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?
+						a.button(href="#" aria-label="Sign up now") Sign up now
+						a.button.button--outline(href="#" aria-label="Learn more") Learn more
+					
+		//- section#cta 
+		//- 	img.illustration.illustration--bottom(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
+		//- 	.container.border--round.overflow--hidden
+		//- 		.boxtransparent 
+		//- 			.inner
+		//- 				p #[b Lorem ipsum dolor sit amet condimentum accumsan] lorem ipsum dolor sit amet porttitor nam non vestibulum. Dui ante non aptent hac molestie viverra conubia libero letius nostra ut. Diam nam non eu aliquam lobortis felis. lorem ipsum dolor sit amet porttitor nam non vestibulum.
+		//- 				a.cta(href='speakers.html' aria-label="Speakers Page") 
+		//- 					button Speakers Page
+
+	script(src=FILE_PREFIX+'js/home.js' defer)

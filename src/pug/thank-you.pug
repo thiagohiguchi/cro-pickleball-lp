@@ -1,0 +1,16 @@
+extends ./layouts/_default.pug
+block variables
+	- var title = 'CRO Pickleball Thank You | Thiago Higuchi'
+	- var description = 'Test project using HTML, CSS, and JS'
+	- var author = 'Thiago Higuchi'
+	- var imgPrefixUrl = IMG_PREFIX_URL
+
+block content
+	include ./partials/_navbar.pug
+	main
+		section.section--thankyou.bg--light2
+			.container
+				.stack.gap--sm.text--center
+					h1 Thank you!
+					p Stay tuned for updates on your waitlist status and for more event details.
+				

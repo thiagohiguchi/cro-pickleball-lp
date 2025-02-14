@@ -1,0 +1,36 @@
+@use 'modules/variables' as *; // Import variables from modules folder
+
+@mixin shadow($color: #545454) {
+  box-shadow: 0 1px 1px 0px rgba($color, 0.4);
+}
+
+@mixin size($w, $h: $w, $bdrs: 0) {
+  width: $w;
+  height: $h;
+  border-radius: $bdrs;
+}
+
+@mixin flex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+/* RWD @media query setting */
+@mixin desktop-lg {
+  @media (min-width: $desktop-lg-min) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-min) {
+    @content;
+  }
+}

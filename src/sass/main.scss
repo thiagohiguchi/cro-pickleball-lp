@@ -1,0 +1,24 @@
+@use "modules/reset" as *;
+@use "modules/fonts" as *;
+@use "modules/variables" as *;
+@use "modules/fonts" as *;
+@use "modules/common" as *;
+@use "modules/mixins" as *;
+@use "components/navbar" as *;
+@use "components/button" as *;
+@use "sass:color";
+
+.section {
+  &--thankyou {
+    padding: 48px 0;
+    min-height: calc(100vh - $navbar-height);
+  }
+}
+
+@include tablet {
+  .section {
+    &--thankyou {
+      padding: 100px 0;
+    }
+  }
+}

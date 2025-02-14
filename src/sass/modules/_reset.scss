@@ -1,0 +1,95 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default button styles */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Remove anchor text decoration */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset headings & body text */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set base font styles */
+body {
+  min-height: 100%;
+  font-family: sans-serif;
+  color: #545454;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove default styles on form elements */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Remove input autofill background */
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* Responsive images */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scrolling */
+html {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* Prevent text selection for specific elements */
+button,
+a {
+  user-select: none;
+}
