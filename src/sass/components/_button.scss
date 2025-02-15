@@ -5,10 +5,12 @@
   display: inline-block;
   padding: 12px 24px;
   border-radius: 100px;
-  background-color: #05f;
+  background-color: $primary-color;
   color: #fff;
+  letter-spacing: 0.2px;
   line-height: 1.5;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 
   &:hover,
   &:focus {
@@ -17,7 +19,7 @@
 
   &--outline {
     background: transparent;
-    border: solid 1px #05f;
+    border: solid 1px $primary-color;
     color: $primary-color;
 
     &:hover,

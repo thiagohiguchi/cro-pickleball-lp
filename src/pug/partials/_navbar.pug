@@ -1,5 +1,7 @@
 header.navbar.bg--light1
-  img.navbar__logo(src="logo.png" alt="Logo")
+  .navbar__logo
+    img.navbar__logo--mobile(src="images/logo--mobile.svg" width="42" height="32" alt="Logo")
+    img.navbar__logo--desktop(src="images/logo.svg" width="125" height="24" alt="Logo")
   nav
     ul.navbar__menu
       li.navbar__menu-item: a.navbar__menu-link(href="#") Find class &amp; appointments
@@ -8,4 +10,6 @@ header.navbar.bg--light1
       li.navbar__menu-item: a.navbar__menu-link(href="#") List my business
       li.navbar__menu-item: a.navbar__menu-link(href="#") Corporate wellness
       li.navbar__menu-item: a.navbar__menu-link(href="#") Log in
-      li.navbar__menu-item: a.button.button--small(href="#") Sign up now
+  a.button.button--small(href="/form.html" aria-label="Sign up now") Sign up now
+  button.navbar__hamburguer(aria-label="Menu")
+    div &nbsp;
