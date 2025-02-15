@@ -4,21 +4,31 @@
 @use "modules/fonts" as *;
 @use "modules/common" as *;
 @use "modules/mixins" as *;
+
 @use "components/navbar" as *;
 @use "components/button" as *;
+@use "components/heading" as *;
 @use "sass:color";
 
 .section {
+  padding: 48px 0;
+  min-height: calc(100vh - $navbar-height);
+
   &--thankyou {
-    padding: 48px 0;
-    min-height: calc(100vh - $navbar-height);
+  }
+
+  &--form {
+    .container {
+      max-width: 600px;
+    }
   }
 }
 
 @include tablet {
   .section {
+    padding: 100px 0;
+
     &--thankyou {
-      padding: 100px 0;
     }
   }
 }

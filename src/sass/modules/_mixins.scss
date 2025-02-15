@@ -1,19 +1,49 @@
-@use 'modules/variables' as *; // Import variables from modules folder
+@use "modules/variables" as *; // Import variables from modules folder
+@use "sass:math";
 
-@mixin shadow($color: #545454) {
-  box-shadow: 0 1px 1px 0px rgba($color, 0.4);
+@function stripUnits($number) {
+  @return math.div($number, ($number * 0 + 1));
 }
 
-@mixin size($w, $h: $w, $bdrs: 0) {
-  width: $w;
-  height: $h;
-  border-radius: $bdrs;
+@function calculateRem($size) {
+  $remSize: math.div($size, 16px);
+  @return #{$remSize}rem;
 }
 
-@mixin flex($jc: center, $ai: center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
+@function calculateClamp(
+  $minimum,
+  $preferred,
+  $maximum,
+  $preferred_viewport_width: 1000px
+) {
+  $clamp_parameter_1: calculateRem($minimum);
+  $clamp_parameter_2: stripUnits(
+      (math.div(($preferred + 0), $preferred_viewport_width)) * 100
+    ) * 1vw;
+  $clamp_parameter_3: calculateRem($maximum);
+
+  @return clamp(
+    #{$clamp_parameter_1},
+    #{$clamp_parameter_2},
+    #{$clamp_parameter_3}
+  );
+}
+
+/* The css property will be at the preferred size on 1000 pixel wide viewports by default. */
+@mixin pixelsToResponsiveUnit(
+  $property_name,
+  $minimum,
+  $preferred,
+  $maximum,
+  $preferred_viewport_width: 1000px
+) {
+  #{$property_name}: $minimum;
+  #{$property_name}: calculateClamp(
+    $minimum,
+    $preferred,
+    $maximum,
+    $preferred_viewport_width
+  );
 }
 
 /* RWD @media query setting */

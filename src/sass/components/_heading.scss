@@ -1,0 +1,13 @@
+@use "modules/variables" as *;
+@use "modules/mixins" as *;
+// @use "sass:color";
+
+.heading {
+  &--1 {
+    // font-size: 3.25rem; //2.25rem
+    // line-height: 1.08;
+    font-weight: bold;
+    color: red;
+    @include pixelsToResponsiveUnit(font-size, 14px, 38px, 60px);
+  }
+}
