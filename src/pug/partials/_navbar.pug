@@ -1,17 +1,22 @@
+block variables
+  - var showMenuItens = true
+
 header.navbar.bg--light1
   .navbar__logo
     a(href="/index.html" aria-label="Home") 
       img.navbar__logo--mobile(src="images/logo--mobile.svg" width="42" height="32" alt="Logo")
     a(href="/index.html" aria-label="Home") 
       img.navbar__logo--desktop(src="images/logo.svg" width="125" height="24" alt="Logo")
-  nav
-    ul.navbar__menu
-      li.navbar__menu-item: a.navbar__menu-link(href="#") Find class &amp; appointments
-      li.navbar__menu-item: a.navbar__menu-link(href="#") Plans
-      li.navbar__menu-item: a.navbar__menu-link(href="#") How credits work
-      li.navbar__menu-item: a.navbar__menu-link(href="#") List my business
-      li.navbar__menu-item: a.navbar__menu-link(href="#") Corporate wellness
-      li.navbar__menu-item: a.navbar__menu-link(href="#") Log in
-  a.button.button--small(href="/form.html" aria-label="Sign up now") Sign up now
-  button.navbar__hamburguer(aria-label="Menu")
-    div &nbsp;
+  
+  if showMenuItens
+    nav
+      ul.navbar__menu
+        li.navbar__menu-item: a.navbar__menu-link(href="#") Find class &amp; appointments
+        li.navbar__menu-item: a.navbar__menu-link(href="#") Plans
+        li.navbar__menu-item: a.navbar__menu-link(href="#") How credits work
+        li.navbar__menu-item: a.navbar__menu-link(href="#") List my business
+        li.navbar__menu-item: a.navbar__menu-link(href="#") Corporate wellness
+        li.navbar__menu-item: a.navbar__menu-link(href="#") Log in
+    a.button.button--small(href="/form.html" aria-label="Sign up now") Sign up now
+    button.navbar__hamburguer(aria-label="Menu")
+      div &nbsp;
