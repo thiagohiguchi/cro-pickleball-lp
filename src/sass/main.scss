@@ -8,7 +8,7 @@
 @use "components/navbar" as *;
 @use "components/button" as *;
 @use "components/heading" as *;
-@use "sass:color";
+@use "components/card" as *;
 
 .section {
   padding: 48px 0;
@@ -18,8 +18,16 @@
   }
 
   &--form {
-    .container {
+    p {
       max-width: 600px;
+      margin: auto;
+    }
+
+    .gridcontainer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      @include pixelsToResponsiveUnit(gap, 20px, 50px, 100px);
     }
   }
 }
@@ -29,6 +37,12 @@
     padding: 100px 0;
 
     &--thankyou {
+    }
+
+    &--form {
+      .gridcontainer {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }

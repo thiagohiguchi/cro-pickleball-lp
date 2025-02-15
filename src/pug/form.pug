@@ -1,0 +1,18 @@
+extends ./layouts/_default.pug
+block variables
+	- var title = 'CRO Pickleball Form | Thiago Higuchi'
+	- var description = 'Test project using HTML, CSS, and JS'
+	- var author = 'Thiago Higuchi'
+
+block content
+	include ./partials/_navbar.pug
+	main
+		section.section.section--form.bg--light2
+			.container.stack.gap--lg
+				.stack.gap--sm.text--center
+					h1.heading--1 Let's do this
+					p Thank you for your interest in the 2025 ClassPass Pickleball Classic. Submit your details below to join the waitlist.
+				.gridcontainer
+					.card oi
+					.imagewrapper ao
+						//- img(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")

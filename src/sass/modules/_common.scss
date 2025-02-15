@@ -1,4 +1,5 @@
 @use "modules/variables" as *;
+@use "modules/mixins" as *;
 
 * {
   font-family: "TT-Norms", sans-serif;
@@ -30,6 +31,10 @@ h5 {
   &.gap {
     &--sm {
       gap: 12px;
+    }
+    &--lg {
+      gap: 32px;
+      @include pixelsToResponsiveUnit(gap, 32px, 40px, 48px);
     }
   }
 }
