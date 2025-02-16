@@ -3,48 +3,71 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
-  const dots = document.querySelectorAll(".carousel__navigation-item");
+  const navContainer = document.querySelector(".carousel__navigation");
   let index = 0;
+  let numVisibleCards = getVisibleCards();
   let touchStartX = 0;
   let touchEndX = 0;
-
+  
   if (!track || cards.length === 0) {
     console.error("Carousel elements not found.");
     return;
   }
 
-  const totalCards = cards.length;
-  const cardWidth = cards[0].offsetWidth;
+  function getVisibleCards() {
+    if (window.innerWidth >= 992) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
 
-  // function updateCarousel() {
-  //   const offset = -index * (cardWidth + 32);
-  //   track.style.transform = `translateX(${offset}px)`;
-  //   dots.forEach((dot, dotIndex) => {
-  //     dot.classList.toggle("carousel__navigation-item--active", dotIndex === index);
-  //   });
-  // }
+  function updateNavigation() {
+    numVisibleCards = getVisibleCards();
+    const totalMovements = Math.ceil(cards.length / numVisibleCards);
+    navContainer.innerHTML = "";
+
+    for (let i = 0; i < totalMovements; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("carousel__navigation-item");
+      if (i === index) dot.classList.add("carousel__navigation-item--active");
+      dot.addEventListener("click", () => {
+        index = i;
+        updateCarousel();
+      });
+      navContainer.appendChild(dot);
+    }
+  }
+
   function updateCarousel() {
-    let numVisibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-    let offset = -index * (cardWidth * numVisibleCards);
-    track.style.transform = `translateX(${offset}px)`;
+    numVisibleCards = getVisibleCards();
+    const totalCards = cards.length;
+    const maxIndex = Math.ceil(cards.length / numVisibleCards) - 1;
+    const trackWidth = track.getBoundingClientRect().width;
+    index = Math.min(index, maxIndex);
     
-    dots.forEach((dot, dotIndex) => {
-        if (dotIndex >= index && dotIndex < index + numVisibleCards) {
-            dot.classList.add("cards-navigation__item--active");
-        } else {
-            dot.classList.remove("cards-navigation__item--active");
-        }
-    });
-}
+    let offset = -index * ((cards[0].offsetWidth * numVisibleCards) + 32);
+    
+    if(numVisibleCards > 1 && offset != 0){
+      offset = -index * (cards[0].offsetWidth - 50 - 32);
+    }
+
+    
+    track.style.transform = `translateX(${offset}px)`;
+    updateNavigation();
+  }
 
   function moveNext() {
-    index = (index + 1) % totalCards;
-    updateCarousel();
+    const maxIndex = Math.ceil(cards.length / numVisibleCards) - 1;
+    if (index < maxIndex) {
+      index++;
+      updateCarousel();
+    }
   }
 
   function movePrev() {
-    index = (index - 1 + totalCards) % totalCards;
-    updateCarousel();
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
   }
 
   function handleTouchStart(event) {
@@ -62,15 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function handleResize() {
+    updateCarousel();
+  }
+
   prevButton?.addEventListener("click", movePrev);
   nextButton?.addEventListener("click", moveNext);
   track.addEventListener("touchstart", handleTouchStart);
   track.addEventListener("touchend", handleTouchEnd);
+  window.addEventListener("resize", handleResize);
 
-  dots.forEach((dot, dotIndex) => {
-    dot.addEventListener("click", () => {
-      index = dotIndex;
-      updateCarousel();
-    });
-  });
+  updateCarousel();
 });

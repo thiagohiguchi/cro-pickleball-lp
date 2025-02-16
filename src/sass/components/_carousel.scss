@@ -119,8 +119,8 @@
 @include tablet {
   .carousel {
     .card {
-      width: calc(45% - 32px);
-      min-width: calc(45% - 32px);
+      width: calc(50% - 50px - 32px);
+      min-width: calc(50% - 50px - 32px);
     }
   }
 }
@@ -137,8 +137,8 @@
     }
 
     .card {
-      width: calc(33% - 32px);
-      min-width: calc(33% - 32px);
+      width: calc(33.33% - 50px - 32px);
+      min-width: calc(33.33% - 50px - 32px);
     }
   }
 }
