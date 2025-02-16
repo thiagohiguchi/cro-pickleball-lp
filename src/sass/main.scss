@@ -9,6 +9,7 @@
 @use "components/button" as *;
 @use "components/heading" as *;
 @use "components/card" as *;
+@use "components/form" as *;
 
 .section {
   padding: 48px 0;
@@ -18,16 +19,25 @@
   }
 
   &--form {
+    .container {
+      max-width: 1014px;
+    }
+
     p {
       max-width: 600px;
       margin: auto;
     }
 
-    .gridcontainer {
+    .grid-container {
       display: grid;
+      align-items: flex-start;
       grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      @include pixelsToResponsiveUnit(gap, 20px, 50px, 100px);
+      gap: 32px;
+      @include pixelsToResponsiveUnit(gap, 32px, 50px, 100px);
+      text-align: center;
+    }
+    .image-wrapper {
+      margin: auto;
     }
   }
 }
@@ -40,8 +50,13 @@
     }
 
     &--form {
-      .gridcontainer {
+      .grid-container {
         grid-template-columns: repeat(2, 1fr);
+        // align-items: center;
+        text-align: left;
+      }
+      .image-wrapper {
+        margin: 0;
       }
     }
   }

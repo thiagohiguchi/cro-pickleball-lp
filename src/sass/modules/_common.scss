@@ -52,6 +52,10 @@ h5 {
 }
 
 .border {
+  &--clip {
+    overflow: hidden;
+  }
+
   &--round {
     border-radius: 20px;
   }

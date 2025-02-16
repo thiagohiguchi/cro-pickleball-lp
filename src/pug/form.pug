@@ -13,7 +13,29 @@ block content
 				.stack.gap--sm.text--center
 					h1.heading--1 Let's do this
 					p Thank you for your interest in the 2025 ClassPass Pickleball Classic. Submit your details below to join the waitlist.
-				.gridcontainer
-					.card oi
-					.imagewrapper ao
-						//- img(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
+				.grid-container
+					.card.stack.gap--sm
+						h4.heading--4 Contact information
+						p The information below will be used to contact you with event updates and to let you know your status on the waitlist.
+						.form__grid
+							.form__container
+								label.form__label(for="firstname") First Name*
+								input(type="text", name="firstname")
+							.form__container
+								label.form__label(for="lastname") Last Name*
+								input(type="text", name="lastname")
+							.form__container.form__container-span--2
+								label.form__label(for="phone") Phone Number*
+								input(type="number", name="phone")
+							.form__container.form__container-span--2
+								label.form__label(for="email") E-mail address*
+								input(type="text", name="email")
+							.form__container.form__container-span--2
+								label.form__label(for="email") Pickleball experience level*
+								select#selectField(name="selectField" placeholder="Please select")
+									option(value="option1") Option 1
+									option(value="option2") Option 2
+									option(value="option3") Option 3
+						a.button.button--full(href="/thank-you.html" aria-label="Join waitlist") Join waitlist
+					.image-wrapper
+						img.border--round.border--clip(src='images/form-image.jpg' alt="Form image" loading="lazy")

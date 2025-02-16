@@ -8,4 +8,8 @@
 
     @include pixelsToResponsiveUnit(font-size, 14px, 38px, 60px);
   }
+  &--4 {
+    line-height: 1.4;
+    font-size: 1.25rem;
+  }
 }
