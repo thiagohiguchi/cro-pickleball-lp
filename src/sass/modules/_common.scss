@@ -23,6 +23,12 @@ h5 {
   line-height: 1.08;
 }
 
+p {
+  b {
+    font-weight: 700;
+  }
+}
+
 // UTILS
 .stack {
   display: flex;
@@ -49,6 +55,21 @@ h5 {
   &--center {
     text-align: center;
   }
+
+  &--lg {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
 }
 
 .border {
@@ -59,11 +80,29 @@ h5 {
   &--round {
     border-radius: 20px;
   }
+  &--round-md {
+    border-radius: 16px;
+  }
+  &--round-sm {
+    border-radius: 12px;
+  }
 }
 
 .overflow {
   &--hidden {
     overflow: hidden;
+  }
+}
+
+.max-width {
+  &--600 {
+    max-width: 600px;
+  }
+}
+
+.margin-x {
+  &--auto {
+    margin: 0 auto;
   }
 }
 
@@ -76,5 +115,8 @@ h5 {
   }
   &--light3 {
     background-color: $bg-color-light3;
+  }
+  &--dark1 {
+    background-color: $bg-color-dark1;
   }
 }
