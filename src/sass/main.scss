@@ -10,22 +10,36 @@
 @use "components/heading" as *;
 @use "components/card" as *;
 @use "components/form" as *;
+@use "components/carousel" as *;
 
 .section {
   padding: 48px 0;
-  min-height: calc(100vh - $navbar-height);
 
   &--thankyou {
+    min-height: calc(100vh - $navbar-height);
+  }
+
+  &--news {
+  }
+
+  &--cta {
+    text-align: left;
+
+    .heading--2,
+    p {
+      color: #fff;
+    }
+
+    .button {
+      margin-top: 12px;
+    }
   }
 
   &--form {
+    min-height: calc(100vh - $navbar-height);
+
     .container {
       max-width: 1014px;
-    }
-
-    p {
-      max-width: 600px;
-      margin: auto;
     }
 
     .grid-container {
@@ -47,6 +61,14 @@
     padding: 100px 0;
 
     &--thankyou {
+    }
+
+    &--cta {
+      text-align: center;
+
+      .stack {
+        align-items: center;
+      }
     }
 
     &--form {

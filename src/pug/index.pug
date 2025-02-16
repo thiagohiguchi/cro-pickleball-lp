@@ -16,14 +16,90 @@ block content
 						p Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?
 						a.button(href="#" aria-label="Sign up now") Sign up now
 						a.button.button--outline(href="#" aria-label="Learn more") Learn more
-					
-		//- section#cta 
-		//- 	img.illustration.illustration--bottom(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
-		//- 	.container.border--round.overflow--hidden
-		//- 		.boxtransparent 
-		//- 			.inner
-		//- 				p #[b Lorem ipsum dolor sit amet condimentum accumsan] lorem ipsum dolor sit amet porttitor nam non vestibulum. Dui ante non aptent hac molestie viverra conubia libero letius nostra ut. Diam nam non eu aliquam lobortis felis. lorem ipsum dolor sit amet porttitor nam non vestibulum.
-		//- 				a.cta(href='speakers.html' aria-label="Speakers Page") 
-		//- 					button Speakers Page
 
-	script(src=FILE_PREFIX+'js/script.js' defer)
+		section#cta.section.section--cta.bg--dark1
+			//- img.illustration.illustration--bottom(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
+			.container
+				.stack.gap--sm
+					h2.heading--2 Don't miss out
+					p Join the waitlist below to sign up for more event updates and get closer to securing your spot.
+					a.button(href='form.html' aria-label="Sign up now") Sign up now
+					
+
+		section#news.section.section--news.bg--light2.border--clip
+			.container
+				.stack.gap--lg
+					.stack.gap--sm.max-width--600.margin-x--auto.text--center
+						h2.heading--2 Pickleball in the spotlight
+						p Pickleball is the fastest growing sport globally, increasing in popularity 445% YoY. Here's what people have to say about pickleball in the news:
+						//- a.button(href='form.html' aria-label="Sign up now") Sign up now
+					//- .cards-list
+					//- 	.card.stack.gap--sm
+					//- 		img.border--clip.border--round-sm.margin-x--auto(src='images/press/Press_Image01.jpg' alt="Sports & Rec Weekly" width="325" height="161" loading="lazy")
+					//- 		p
+					//- 			b "The fastest-growing sport in America is no longer just a trend—it's a movement."
+					//- 		span 
+					//- 			p —Sports & Rec Weekly
+					//- 		a.link(href='form.html' aria-label="Read more") Read more
+					//- 	.card.stack.gap--sm
+					//- 		img.border--clip.border--round-sm.margin-x--auto(src='images/press/Press_Image01.jpg' alt="Sports & Rec Weekly" width="325" height="161" loading="lazy")
+					//- 		p
+					//- 			b "The fastest-growing sport in America is no longer just a trend—it's a movement."
+					//- 		span 
+					//- 			p —Sports & Rec Weekly
+					//- 		a.link(href='form.html' aria-label="Read more") Read more
+					//- 	.card.stack.gap--sm
+					//- 		img.border--clip.border--round-sm.margin-x--auto(src='images/press/Press_Image01.jpg' alt="Sports & Rec Weekly" width="325" height="161" loading="lazy")
+					//- 		p
+					//- 			b "The fastest-growing sport in America is no longer just a trend—it's a movement."
+					//- 		span 
+					//- 			p —Sports & Rec Weekly
+					//- 		a.link(href='form.html' aria-label="Read more") Read more
+					//- 	.card.stack.gap--sm
+					//- 		img.border--clip.border--round-sm.margin-x--auto(src='images/press/Press_Image01.jpg' alt="Sports & Rec Weekly" width="325" height="161" loading="lazy")
+					//- 		p
+					//- 			b "The fastest-growing sport in America is no longer just a trend—it's a movement."
+					//- 		span 
+					//- 			p —Sports & Rec Weekly
+					//- 		a.link(href='form.html' aria-label="Read more") Read more				
+					//- .cards-navigation
+					//- 	.cards-navigation__item
+					//- 	.cards-navigation__item
+					.carousel.carousel__container
+						.carousel__list(role="list")
+							- for (var i = 0; i < 4; i++)
+								.card.stack.gap--sm(role="listitem")
+									img.border--clip.border--round-sm.margin-x--auto(
+									src='images/press/Press_Image01.jpg', 
+									alt="Sports & Rec Weekly", 
+									width="325", 
+									height="161", 
+									loading="lazy"
+									)
+									p
+									b "The fastest-growing sport in America is no longer just a trend—it's a movement."
+									span 
+									p —Sports & Rec Weekly
+									a.link(href='form.html' aria-label="Read more") Read more
+
+						.carousel__controls
+							button.prev(aria-label="Previous Card") 
+								span ‹
+							button.next(aria-label="Next Card") 
+								span ›
+
+						.carousel__navigation
+							- for (var i = 0; i < 4; i++)
+								.carousel__navigation-item(class=(i === 0 ? 'carousel__navigation-item--active' : ''))
+
+
+		section#cta.section.section--cta.bg--dark1
+			//- img.illustration.illustration--bottom(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
+			.container.max-width--600
+				.stack.gap--sm
+					h2.heading--2 Don't miss out
+					p Join the waitlist below to sign up for more event updates and get closer to securing your spot.
+					a.button(href='form.html' aria-label="Sign up now") Sign up now
+					
+	script(src=FILE_PREFIX+'js/index.js' defer)
+	script(src=FILE_PREFIX+'js/navbar.js' defer)
