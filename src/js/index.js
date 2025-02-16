@@ -1,3 +1,35 @@
+// HERO FADE EFFECT
+document.addEventListener("DOMContentLoaded", () => {
+  function cycleFadeEffect() {
+    const items = document.querySelectorAll('.mosaic__item');
+    const numOfItemsToFade = Math.floor(Math.random() * 2) + 1;  // Random number between 1 and 2 (less than 3)
+    
+    // Ensure previously hidden items are visible again before selecting new ones
+    items.forEach(item => item.classList.remove('mosaic__item--fade'));
+  
+    const randomItems = [];
+    
+    // Randomly select `numOfItemsToFade` elements to hide
+    while (randomItems.length < numOfItemsToFade) {
+      const randomIndex = Math.floor(Math.random() * items.length);
+      const randomItem = items[randomIndex];
+      
+      if (!randomItems.includes(randomItem)) {
+        randomItems.push(randomItem);
+      }
+    }
+  
+    // Apply fade-out to the selected items
+    randomItems.forEach(item => {
+      item.classList.add('mosaic__item--fade');
+    });
+  }
+  
+  // Trigger the cycle every 3 seconds
+  setInterval(cycleFadeEffect, 2500);
+  
+});
+
 // LOGOS INFINITE SLIDER
 document.addEventListener("DOMContentLoaded", () => {
   const slideContainer = document.querySelector(".infinite-slide");

@@ -11,9 +11,40 @@
 @use "components/card" as *;
 @use "components/form" as *;
 @use "components/carousel" as *;
+@use "components/mosaic" as *;
 
 .section {
   padding: 48px 0;
+
+  &--hero {
+    padding: 0 !important;
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      &__content {
+        padding: 32px 2.5% 48px;
+        text-align: center;
+
+        .stack {
+          max-width: 571px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
 
   &--logos {
     overflow: hidden;
@@ -192,6 +223,44 @@
 
 @include desktop {
   .section {
+    &--hero {
+      position: relative;
+      display: flex;
+      min-height: calc(100vh - $navbar-height);
+      max-height: 789px;
+
+      .hero-grid {
+        max-width: $grid;
+        width: 94%;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        @include pixelsToResponsiveUnit(gap, 1px, 60px, 100px);
+
+        &__content {
+          order: 1;
+          text-align: left;
+          padding-left: 0;
+          padding-right: 0;
+
+          .stack {
+            margin: 0;
+          }
+        }
+
+        &__image {
+          order: 2;
+        }
+      }
+
+      .button-group {
+        flex-direction: row;
+
+        .button {
+          width: fit-content;
+        }
+      }
+    }
+
     &--about {
       .cards-grid {
         grid-template-columns: repeat(4, 1fr);

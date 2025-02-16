@@ -8,14 +8,34 @@ block variables
 block content
 	include ./partials/_navbar.pug
 	main
-		section#hero
-			.container
-				.hero
-					.hero__highlight 
-						h1 You're invited to the 2025 ClassPass Pickleball Classic
+		section#hero.section.section--hero.bg--light2
+			.hero-grid
+				.hero-grid__image
+					.mosaic
+						.mosaic__item.mosaic__item--1
+							img(src=`images/mosaic/1.jpg`, alt=`Mosaic Picture 1`, loading="lazy")
+						.mosaic__item.mosaic__item--2
+							img(src=`images/mosaic/2.jpg`, alt=`Mosaic Picture 2`, loading="lazy")
+						.mosaic__item.mosaic__item--3
+							img(src=`images/mosaic/3.jpg`, alt=`Mosaic Picture 3`, loading="lazy")
+						.mosaic__item.mosaic__item--4
+							img(src=`images/mosaic/4.jpg`, alt=`Mosaic Picture 4`, loading="lazy")
+						.mosaic__item.mosaic__item--5
+							img(src=`images/mosaic/5.jpg`, alt=`Mosaic Picture 5`, loading="lazy")
+						.mosaic__item.mosaic__item--6
+							img(src=`images/mosaic/6.jpg`, alt=`Mosaic Picture 6`, loading="lazy")
+						.mosaic__item.mosaic__item--7
+							img(src=`images/mosaic/7.jpg`, alt=`Mosaic Picture 7`, loading="lazy")
+						.mosaic__item.mosaic__item--8
+							img(src=`images/mosaic/8.jpg`, alt=`Mosaic Picture 8`, loading="lazy")
+	
+				.hero-grid__content 
+					.stack.gap--sm
+						h1.heading--1 You're invited to the 2025 ClassPass Pickleball Classic
 						p Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?
-						a.button(href="/sign-up.html" aria-label="Sign up now") Sign up now
-						a.button.button--outline(href="#about" aria-label="Learn more") Learn more
+						.button-group
+							a.button(href="/sign-up.html" aria-label="Sign up now") Sign up now
+							a.button.button--outline(href="#about" aria-label="Learn more") Learn more
 
 
 		section#logos.section.section--logos.bg--light3

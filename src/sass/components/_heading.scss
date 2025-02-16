@@ -6,7 +6,7 @@
     line-height: 1.08;
     font-weight: bold;
 
-    @include pixelsToResponsiveUnit(font-size, 14px, 38px, 60px);
+    @include pixelsToResponsiveUnit(font-size, 36px, 45px, 53px);
   }
   &--2 {
     line-height: 0.9;
