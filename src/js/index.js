@@ -1,3 +1,25 @@
+// LOGOS INFINITE SLIDER
+document.addEventListener("DOMContentLoaded", () => {
+  const slideContainer = document.querySelector(".infinite-slide");
+  const slideContent = slideContainer.innerHTML;
+  slideContainer.innerHTML += slideContent; // Duplicate content for smooth looping
+
+  let position = 0;
+  const speed = 0.8; 
+
+  function animate() {
+    position -= speed;
+    if (position <= -slideContainer.scrollWidth / 2) {
+      position = 0;
+    }
+    slideContainer.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+});
+
+
+// CAROUSEL
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel__list");
   const cards = document.querySelectorAll(".card");
