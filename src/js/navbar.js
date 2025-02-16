@@ -11,13 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }));
 
   
-  // Function to check viewport size and remove class if necessary
-  function handleViewportResize() {
-    if (window.innerWidth > 1200) { // Adjust 'window.desktopLgMin' with the actual breakpoint value
-      document.body.classList.remove('navbar-active');
-    }
-  }
-
-  // Add event listener for resize to call handleViewportResize function
-  window.addEventListener('resize', handleViewportResize);
+  // Add event listener for resize to remove the active class
+  window.addEventListener('resize', document.body.classList.remove('navbar-active'));
 });
