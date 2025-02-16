@@ -86,6 +86,7 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  scroll-padding-top: 64px; /* Adjust based on navbar height */
 }
 
 /* Prevent text selection for specific elements */
