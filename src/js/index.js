@@ -51,6 +51,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// TOGGLE GROUP PANEL
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleNavItems = document.querySelectorAll('.toggle-group__nav-item');
+  const panels = document.querySelectorAll('.toggle-group__panel-group');
+
+  // Set the initial active panel
+  panels[0].classList.add('active');
+  toggleNavItems[0].classList.add('toggle-group__nav-item--active');
+
+  toggleNavItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      // Remove active class from all nav items and panels
+      toggleNavItems.forEach((navItem) => {
+        navItem.classList.remove('toggle-group__nav-item--active');
+      });
+      panels.forEach((panel) => {
+        panel.classList.remove('active');
+      });
+
+      // Add active class to the clicked item and corresponding panel
+      item.classList.add('toggle-group__nav-item--active');
+      panels[index].classList.add('active');
+    });
+  });
+});
+
+
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel__list");
