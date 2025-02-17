@@ -11,6 +11,7 @@ const htmlmin = require("gulp-htmlmin");
 const clean = require("gulp-clean");
 const rename = require("gulp-rename");
 const logger = require("gulp-logger");
+const replace = require("gulp-replace");
 const gulpif = require("gulp-if");
 const browserSync = require("browser-sync").create();
 const path = require("path");
@@ -79,6 +80,15 @@ function compileSass() {
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer("last 2 version"))
+    .pipe(
+      gulpif(
+        isProduction,
+        replace(/url\(["']?(\.\.\/){2}(.*?)["']?\)/g, (match, p1, url) => {
+          // Replace '../../' with '/cro-pickleball-lp/'
+          return `url('/cro-pickleball-lp/${url}')`;
+        })
+      )
+    )
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest(`${paths.dist}/css`, { overwrite: true }))
