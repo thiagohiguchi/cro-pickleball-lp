@@ -1,14 +1,13 @@
 {% set imgPrefixUrl = IMG_PREFIX_URL %}
 {% set filePrefixUrl = FILE_PREFIX %}
-
 <header class="navbar bg--light1">
   <div class="navbar__container">
     <div class="navbar__logo">
       <a href="{{ filePrefixUrl }}index.html" aria-label="Home">
-        <img class="navbar__logo--mobile" src="{{ imgPrefixUrl }}images/logo--mobile.svg" width="42" height="32" alt="Logo">
+        <img class="navbar__logo--mobile" src="{{ imgPrefixUrl }}images/logo--mobile.svg" width="42" height="32" alt="Logo"/>
       </a>
       <a href="{{ filePrefixUrl }}index.html" aria-label="Home">
-        <img class="navbar__logo--desktop" src="{{ imgPrefixUrl }}images/logo.svg" width="125" height="24" alt="Logo">
+        <img class="navbar__logo--desktop" src="{{ imgPrefixUrl }}images/logo.svg" width="125" height="24" alt="Logo"/>
       </a>
     </div>
     {% if showMenuItems %}

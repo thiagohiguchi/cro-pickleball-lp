@@ -1,12 +1,10 @@
 {% extends "./layouts/_default.njk" %}
-
-  {% set title = 'CRO Pickleball LP | Thiago Higuchi' %}
-  {% set description = 'Test project using HTML, CSS, and JS' %}
-  {% set author = 'Thiago Higuchi' %}
-  {% set imgPrefixUrl = IMG_PREFIX_URL %}
-  {% set filePrefixUrl = FILE_PREFIX %}
-  {% set showMenuItems = true %}
-
+{% set title = 'CRO Pickleball LP | Thiago Higuchi' %}
+{% set description = 'Test project using HTML, CSS, and JS' %}
+{% set author = 'Thiago Higuchi' %}
+{% set imgPrefixUrl = IMG_PREFIX_URL %}
+{% set filePrefixUrl = FILE_PREFIX %}
+{% set showMenuItems = true %}
 {% block content %}
   {% include './partials/_navbar.njk' %}
   <main>
@@ -15,36 +13,36 @@
         <div class="hero-grid__image">
           <div class="mosaic">
             <div class="mosaic__item mosaic__item--1">
-              <img src="{{ imgPrefixUrl }}images/mosaic/1.jpg" alt="Mosaic Picture 1" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/1.jpg" alt="Mosaic Picture 1" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--2">
-              <img src="{{ imgPrefixUrl }}images/mosaic/2.jpg" alt="Mosaic Picture 2" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/2.jpg" alt="Mosaic Picture 2" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--3">
-              <img src="{{ imgPrefixUrl }}images/mosaic/3.jpg" alt="Mosaic Picture 3" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/3.jpg" alt="Mosaic Picture 3" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--4">
-              <img src="{{ imgPrefixUrl }}images/mosaic/4.jpg" alt="Mosaic Picture 4" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/4.jpg" alt="Mosaic Picture 4" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--5">
-              <img src="{{ imgPrefixUrl }}images/mosaic/5.jpg" alt="Mosaic Picture 5" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/5.jpg" alt="Mosaic Picture 5" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--6">
-              <img src="{{ imgPrefixUrl }}images/mosaic/6.jpg" alt="Mosaic Picture 6" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/6.jpg" alt="Mosaic Picture 6" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--7">
-              <img src="{{ imgPrefixUrl }}images/mosaic/7.jpg" alt="Mosaic Picture 7" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/7.jpg" alt="Mosaic Picture 7" loading="lazy"/>
             </div>
             <div class="mosaic__item mosaic__item--8">
-              <img src="{{ imgPrefixUrl }}images/mosaic/8.jpg" alt="Mosaic Picture 8" loading="lazy" />
+              <img src="{{ imgPrefixUrl }}images/mosaic/8.jpg" alt="Mosaic Picture 8" loading="lazy"/>
             </div>
           </div>
         </div>
-
         <div class="hero-grid__content">
           <div class="stack gap--sm">
             <h1 class="heading--1">You're invited to the 2025 ClassPass Pickleball Classic</h1>
-            <p>Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?</p>
+            <p>Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever
+              ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?</p>
             <div class="button-group">
               <a href="{{ filePrefixUrl }}sign-up.html" class="button" aria-label="Sign up now">Sign up now</a>
               <a href="#about" class="button button--outline" aria-label="Learn more">Learn more</a>
@@ -53,22 +51,20 @@
         </div>
       </div>
     </section>
-
     <section id="logos" class="section section--logos bg--light3">
       <div class="infinite-slide">
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo1.png" alt="Logo 1" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo2.png" alt="Logo 2" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo3.png" alt="Logo 3" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo4.png" alt="Logo 4" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo5.png" alt="Logo 5" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo6.png" alt="Logo 6" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo7.png" alt="Logo 7" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo8.png" alt="Logo 8" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo9.png" alt="Logo 9" loading="lazy" />
-          <img src="{{ imgPrefixUrl }}images/brands-logos/logo10.png" alt="Logo 10" loading="lazy" />
-        </div>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo1.png" alt="Logo 1" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo2.png" alt="Logo 2" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo3.png" alt="Logo 3" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo4.png" alt="Logo 4" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo5.png" alt="Logo 5" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo6.png" alt="Logo 6" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo7.png" alt="Logo 7" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo8.png" alt="Logo 8" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo9.png" alt="Logo 9" loading="lazy"/>
+        <img src="{{ imgPrefixUrl }}images/brands-logos/logo10.png" alt="Logo 10" loading="lazy"/>
+      </div>
     </section>
-
     <section id="about" class="section section--about bg--light1">
       <div class="container">
         <div class="stack gap--lg">
@@ -76,84 +72,83 @@
             <h2 class="heading--2">What to expect</h2>
             <p>The day will be filled with plenty of fun and action. Here’s what to expect:</p>
           </div>
-
           <div class="cards-grid">
             <div class="cards-grid__item stack gap--sm">
-                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                <h4 class="heading--4">Exclusive event swag & prizes</h4>
-                <span>
-                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
-                </span>
-              </div>
+              <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+              <h4 class="heading--4">Exclusive event swag & prizes</h4>
+              <span>
+                <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+              </span>
+            </div>
             <div class="cards-grid__item stack gap--sm">
-                <img src="{{ imgPrefixUrl }}images/press/Press_Image02.jpg" alt="Live DJ & entertainment" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                <h4 class="heading--4">Live DJ & entertainment</h4>
-                <span>
-                  <p>Have fun in a high-energy atmosphere with curated music and live entertainment that keeps the momentum going.</p>
-                </span>
-              </div>
-              <div class="cards-grid__item stack gap--sm">
-                <img src="{{ imgPrefixUrl }}images/press/Press_Image03.jpg" alt="All-day matches for all levels" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                <h4 class="heading--4">All-day matches for all levels</h4>
-                <span>
-                  <p>Compete in a structured bracket system tailored for every skill level, ensuring fast-paced games and a fair playing field.</p>
-                </span>
-              </div>
-              <div class="cards-grid__item stack gap--sm">
-                <img src="{{ imgPrefixUrl }}images/press/Press_Image04.jpg" alt="Complementary food & drinks" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                <h4 class="heading--4">Complementary food & drinks</h4>
-                <span>
-                  <p>Refuel with a selection of cold-pressed juices and nutritious snacks, available throughout the event to keep players at peak performance.</p>
-                </span>
-              </div>
+              <img src="{{ imgPrefixUrl }}images/press/Press_Image02.jpg" alt="Live DJ & entertainment" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+              <h4 class="heading--4">Live DJ & entertainment</h4>
+              <span>
+                <p>Have fun in a high-energy atmosphere with curated music and live entertainment that keeps the momentum going.</p>
+              </span>
+            </div>
+            <div class="cards-grid__item stack gap--sm">
+              <img src="{{ imgPrefixUrl }}images/press/Press_Image03.jpg" alt="All-day matches for all levels" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+              <h4 class="heading--4">All-day matches for all levels</h4>
+              <span>
+                <p>Compete in a structured bracket system tailored for every skill level, ensuring fast-paced games and a fair playing
+                  field.</p>
+              </span>
+            </div>
+            <div class="cards-grid__item stack gap--sm">
+              <img src="{{ imgPrefixUrl }}images/press/Press_Image04.jpg" alt="Complementary food & drinks" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+              <h4 class="heading--4">Complementary food & drinks</h4>
+              <span>
+                <p>Refuel with a selection of cold-pressed juices and nutritious snacks, available throughout the event to keep players
+                  at peak performance.</p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <section id="schedule" class="section section--schedule bg--light1">
-      <img src="{{ imgPrefixUrl }}images/schedule-bg.jpg" alt="Schedule" loading="lazy" />
+      <img src="{{ imgPrefixUrl }}images/schedule-bg.jpg" alt="Schedule" loading="lazy"/>
       <div class="container bg--light1 border--round-md max-width--600 margin-x--auto">
         <div class="stack gap--sm">
           <h2 class="heading--2">Schedule of events</h2>
           <ul class="events">
-              <li class="events__item">
-                <p class="events__hour">8:00 AM</p>
-                <p class="events__title">Check-in & warm-up courts open</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">9:00 AM</p>
-                <p class="events__title">Opening ceremony & player briefing</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">9:30 AM</p>
-                <p class="events__title">Tournament kickoff—round 1</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">12:00 PM</p>
-                <p class="events__title">Lunch break & DJ set</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">1:00 PM</p>
-                <p class="events__title">Quarterfinal matches</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">2:30 PM</p>
-                <p class="events__title">Semifinals</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">4:00 PM</p>
-                <p class="events__title">Championship match</p>
-              </li>
-			  <li class="events__item">
-                <p class="events__hour">5:00 PM</p>
-                <p class="events__title">Awards ceremony</p>
-              </li>
+            <li class="events__item">
+              <p class="events__hour">8:00 AM</p>
+              <p class="events__title">Check-in & warm-up courts open</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">9:00 AM</p>
+              <p class="events__title">Opening ceremony & player briefing</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">9:30 AM</p>
+              <p class="events__title">Tournament kickoff—round 1</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">12:00 PM</p>
+              <p class="events__title">Lunch break & DJ set</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">1:00 PM</p>
+              <p class="events__title">Quarterfinal matches</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">2:30 PM</p>
+              <p class="events__title">Semifinals</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">4:00 PM</p>
+              <p class="events__title">Championship match</p>
+            </li>
+            <li class="events__item">
+              <p class="events__hour">5:00 PM</p>
+              <p class="events__title">Awards ceremony</p>
+            </li>
           </ul>
         </div>
       </div>
     </section>
-
     <section id="sponsors" class="section section--sponsors bg--light4">
       <div class="container">
         <div class="stack gap--sm text-group">
@@ -166,103 +161,111 @@
             <button class="toggle-group__nav-item">Pressed Juicery</button>
             <button class="toggle-group__nav-item">SET Active</button>
           </div>
-
           <div class="toggle-group__panel">
-             <div class="toggle-group__panel-group">
-                <div class="toggle-group__panel-image">
-                  <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                </div>
-                <div class="toggle-group__panel-content stack gap--sm">
-                  <h3 class="heading--2">Sip & Pickle Wynwood</h3>
-                  <p>Sip and Pickle at The Wynwood Marketplace is an exciting new concept blending the fun Pickleball with the vibrant atmosphere of Wynwood. Whether you’re a seasoned player or new to the game, Sip and Pickle invites you to come play, explore, and entertain your guests while enjoying the thrill of the game.</p>
-                </div>
+            <div class="toggle-group__panel-group">
+              <div class="toggle-group__panel-image">
+                <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
               </div>
-              <div class="toggle-group__panel-group">
-                <div class="toggle-group__panel-image">
-                  <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image02.jpg" alt="Pressed Juicery" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                </div>
-                <div class="toggle-group__panel-content stack gap--sm">
-                  <h3 class="heading--2">Pressed Juicery</h3>
-                  <p>Pressed continues to grow with stores throughout the U.S., as well as an expanding online and wholesale presence. Because they are constantly evolving, they now offer an array of wholesome plant-based foods in addition to their signature cold-pressed juices to keep you nourished throughout the day. It’s all part of their ongoing mission to make plant-forward living as convenient and delicious as possible.</p>
-                </div>
+              <div class="toggle-group__panel-content stack gap--sm">
+                <h3 class="heading--2">Sip & Pickle Wynwood</h3>
+                <p>Sip and Pickle at The Wynwood Marketplace is an exciting new concept blending the fun Pickleball with the vibrant
+                  atmosphere of Wynwood. Whether you’re a seasoned player or new to the game, Sip and Pickle invites you to come play,
+                  explore, and entertain your guests while enjoying the thrill of the game.</p>
               </div>
-              <div class="toggle-group__panel-group">
-                <div class="toggle-group__panel-image">
-                  <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image03.jpg" alt="SET Active" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                </div>
-                <div class="toggle-group__panel-content stack gap--sm">
-                  <h3 class="heading--2">SET Active</h3>
-                  <p>SET is here to simplify the way you get dressed, because let’s be real, life is complicated enough. In an effort to be more effortless, SET set out to design clothes that blur the line between form and function.  The result? Elevated essentials that can go wherever the day takes you—whether that’s getting active or actively chilling on the couch. That’s right, no more changing your outfit a million times over or sacrificing on style just to feel comfortable. Their SETs do it all.</p>
-                </div>
+            </div>
+            <div class="toggle-group__panel-group">
+              <div class="toggle-group__panel-image">
+                <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image02.jpg" alt="Pressed Juicery" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
               </div>
+              <div class="toggle-group__panel-content stack gap--sm">
+                <h3 class="heading--2">Pressed Juicery</h3>
+                <p>Pressed continues to grow with stores throughout the U.S., as well as an expanding online and wholesale presence.
+                  Because they are constantly evolving, they now offer an array of wholesome plant-based foods in addition to their
+                  signature cold-pressed juices to keep you nourished throughout the day. It’s all part of their ongoing mission to make
+                  plant-forward living as convenient and delicious as possible.</p>
+              </div>
+            </div>
+            <div class="toggle-group__panel-group">
+              <div class="toggle-group__panel-image">
+                <img src="{{ imgPrefixUrl }}images/sponsors/Sponsors_Image03.jpg" alt="SET Active" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+              </div>
+              <div class="toggle-group__panel-content stack gap--sm">
+                <h3 class="heading--2">SET Active</h3>
+                <p>SET is here to simplify the way you get dressed, because let’s be real, life is complicated enough. In an effort to
+                  be more effortless, SET set out to design clothes that blur the line between form and function. The result? Elevated
+                  essentials that can go wherever the day takes you—whether that’s getting active or actively chilling on the couch.
+                  That’s right, no more changing your outfit a million times over or sacrificing on style just to feel comfortable. Their
+                  SETs do it all.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <section id="news" class="section section--news bg--light2 border--clip">
       <div class="container">
         <div class="stack gap--lg">
           <div class="stack gap--sm text-group">
             <h2 class="heading--2">Pickleball in the spotlight</h2>
-            <p>Pickleball is the fastest growing sport globally, increasing in popularity 445% YoY. Here's what people have to say about pickleball in the news:</p>
+            <p>Pickleball is the fastest growing sport globally, increasing in popularity 445% YoY. Here's what people have to say
+              about pickleball in the news:</p>
           </div>
-
           <div class="carousel carousel__container">
             <div class="carousel__list">
-                <div class="card stack gap--sm">
-                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                  <p>
-                    <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
-                  </p>
-                  <span>
-                    <p>—Sports & Rec Weekly</p>
-                  </span>
-                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
-                </div>
-                <div class="card stack gap--sm">
-                  <img src="{{ imgPrefixUrl }}images/press/Press_Image02.jpg" alt="GameOn Magazine" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                  <p>
-                    <b>“Pickleball is blending competition and community like no other sport right now”</b>
-                  </p>
-                  <span>
-                    <p>—GameOn Magazine</p>
-                  </span>
-                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
-                </div>
-                <div class="card stack gap--sm">
-                  <img src="{{ imgPrefixUrl }}images/press/Press_Image03.jpg" alt="Athlete’s Edge" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                  <p>
-                    <b>“The sport that went viral is now a national obsession—everyone is picking up a paddle."</b>
-                  </p>
-                  <span>
-                    <p>—Athlete’s Edge</p>
-                  </span>
-                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
-                </div>
-                <div class="card stack gap--sm">
-                  <img src="{{ imgPrefixUrl }}images/press/Press_Image04.jpg" alt="—NextGen Sports" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
-                  <p>
-                    <b>"Fitness, fun, and friendly rivalries—pickleball is officially here to stay."</b>
-                  </p>
-                  <span>
-                    <p>—NextGen Sports</p>
-                  </span>
-                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
-                </div>
+              <div class="card stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+                <p>
+                  <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
+                </p>
+                <span>
+                  <p>—Sports & Rec Weekly</p>
+                </span>
+                <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+              </div>
+              <div class="card stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image02.jpg" alt="GameOn Magazine" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+                <p>
+                  <b>“Pickleball is blending competition and community like no other sport right now”</b>
+                </p>
+                <span>
+                  <p>—GameOn Magazine</p>
+                </span>
+                <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+              </div>
+              <div class="card stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image03.jpg" alt="Athlete’s Edge" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+                <p>
+                  <b>“The sport that went viral is now a national obsession—everyone is picking up a paddle."</b>
+                </p>
+                <span>
+                  <p>—Athlete’s Edge</p>
+                </span>
+                <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+              </div>
+              <div class="card stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image04.jpg" alt="—NextGen Sports" width="325" height="161" class="border--clip border--round-sm" loading="lazy"/>
+                <p>
+                  <b>"Fitness, fun, and friendly rivalries—pickleball is officially here to stay."</b>
+                </p>
+                <span>
+                  <p>—NextGen Sports</p>
+                </span>
+                <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+              </div>
             </div>
-
             <div class="carousel__controls">
-              <button class="prev" aria-label="Previous Card"><span>‹</span></button>
-              <button class="next" aria-label="Next Card"><span>›</span></button>
+              <button class="prev" aria-label="Previous Card">
+                <span>‹</span>
+              </button>
+              <button class="next" aria-label="Next Card">
+                <span>›</span>
+              </button>
             </div>
-
             <div class="carousel__navigation"></div>
           </div>
         </div>
       </div>
     </section>
-
     <section id="cta" class="section section--cta bg--dark1">
       <div class="container max-width--600">
         <div class="stack gap--sm text-group">
@@ -273,7 +276,6 @@
       </div>
     </section>
   </main>
-
 {% endblock %}
 {% block scripts %}
   <script src="{{ FILE_PREFIX }}js/index.js" defer></script>
