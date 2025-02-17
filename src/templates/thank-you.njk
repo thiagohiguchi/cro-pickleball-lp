@@ -1,0 +1,23 @@
+{% extends "./layouts/_default.njk" %}
+
+    {% set title = "CRO Pickleball Thank You | Thiago Higuchi" %}
+    {% set description = "Test project using HTML, CSS, and JS" %}
+    {% set author = "Thiago Higuchi" %}
+  {% set filePrefixUrl = FILE_PREFIX %}
+
+{% block content %}
+    {% include "./partials/_navbar.njk" %}
+    <main>
+        <section class="section section--thankyou bg--light2">
+            <div class="container">
+                <div class="stack gap--sm text--center">
+                    <h1 class="heading--1">Thank you!</h1>
+                    <p>Stay tuned for updates on your waitlist status and for more event details.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ FILE_PREFIX }}js/navbar.js" defer></script>
+{% endblock %}

@@ -1,0 +1,250 @@
+{% extends "./layouts/_default.njk" %}
+
+  {% set title = 'CRO Pickleball LP | Thiago Higuchi' %}
+  {% set description = 'Test project using HTML, CSS, and JS' %}
+  {% set author = 'Thiago Higuchi' %}
+  {% set imgPrefixUrl = IMG_PREFIX_URL %}
+  {% set filePrefixUrl = FILE_PREFIX %}
+
+{% block content %}
+  {% include './partials/_navbar.njk' %}
+  
+  <main>
+    <section id="hero" class="section section--hero bg--light2">
+      <div class="hero-grid">
+        <div class="hero-grid__image">
+          <div class="mosaic">
+            <div class="mosaic__item mosaic__item--1">
+              <img src="{{ imgPrefixUrl }}images/mosaic/1.jpg" alt="Mosaic Picture 1" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--2">
+              <img src="{{ imgPrefixUrl }}images/mosaic/2.jpg" alt="Mosaic Picture 2" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--3">
+              <img src="{{ imgPrefixUrl }}images/mosaic/3.jpg" alt="Mosaic Picture 3" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--4">
+              <img src="{{ imgPrefixUrl }}images/mosaic/4.jpg" alt="Mosaic Picture 4" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--5">
+              <img src="{{ imgPrefixUrl }}images/mosaic/5.jpg" alt="Mosaic Picture 5" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--6">
+              <img src="{{ imgPrefixUrl }}images/mosaic/6.jpg" alt="Mosaic Picture 6" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--7">
+              <img src="{{ imgPrefixUrl }}images/mosaic/7.jpg" alt="Mosaic Picture 7" loading="lazy" />
+            </div>
+            <div class="mosaic__item mosaic__item--8">
+              <img src="{{ imgPrefixUrl }}images/mosaic/8.jpg" alt="Mosaic Picture 8" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-grid__content">
+          <div class="stack gap--sm">
+            <h1 class="heading--1">You're invited to the 2025 ClassPass Pickleball Classic</h1>
+            <p>Pickleball is having a moment, and we're bringing the heat! To compete or just rally for fun, join the first ever ClassPass Pickleball Classic to have fast-paced matches, great vibes, and a day of game-time energy. Ready to play?</p>
+            <div class="button-group">
+              <a href="{{ filePrefixUrl }}sign-up.html" class="button" aria-label="Sign up now">Sign up now</a>
+              <a href="#about" class="button button--outline" aria-label="Learn more">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="logos" class="section section--logos bg--light3">
+      <div class="infinite-slide">
+          <img src="{{ imgPrefixUrl }}images/brands-logos/logo1.png" alt="Logo 1" loading="lazy" />
+        </div>
+    </section>
+
+    <section id="about" class="section section--about bg--light1">
+      <div class="container">
+        <div class="stack gap--lg">
+          <div class="stack gap--sm text-group">
+            <h2 class="heading--2">What to expect</h2>
+            <p>The day will be filled with plenty of fun and action. Here’s what to expect:</p>
+          </div>
+
+          <div class="cards-grid">
+            <div class="cards-grid__item stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                <h4 class="heading--4">Exclusive event swag & prizes</h4>
+                <span>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </span>
+              </div>
+            <div class="cards-grid__item stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                <h4 class="heading--4">Exclusive event swag & prizes</h4>
+                <span>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </span>
+              </div>
+              <div class="cards-grid__item stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                <h4 class="heading--4">Exclusive event swag & prizes</h4>
+                <span>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </span>
+              </div>
+              <div class="cards-grid__item stack gap--sm">
+                <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                <h4 class="heading--4">Exclusive event swag & prizes</h4>
+                <span>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section section--schedule bg--light1">
+      <img src="{{ imgPrefixUrl }}images/schedule-bg.jpg" alt="Schedule" loading="lazy" />
+      <div class="container bg--light1 border--round-md max-width--600 margin-x--auto">
+        <div class="stack gap--sm">
+          <h2 class="heading--2">Schedule of events</h2>
+          <ul class="events">
+              <li class="events__item">
+                <p class="events__hour">8:00 AM</p>
+                <p class="events__title">Check-in & warm-up courts open</p>
+              </li>
+			  <li class="events__item">
+                <p class="events__hour">8:00 AM</p>
+                <p class="events__title">Check-in & warm-up courts open</p>
+              </li>
+			  <li class="events__item">
+                <p class="events__hour">8:00 AM</p>
+                <p class="events__title">Check-in & warm-up courts open</p>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsors" class="section section--sponsors bg--light4">
+      <div class="container">
+        <div class="stack gap--sm text-group">
+          <h2 class="heading--2">About our sponsors</h2>
+          <p>Special thanks to our sponsors who have helped make this event possible.</p>
+        </div>
+        <div class="toggle-group">
+          <div class="toggle-group__nav">
+            <button class="toggle-group__nav-item toggle-group__nav-item--active">Sip &amp; Pickle Wynwood</button>
+            <button class="toggle-group__nav-item">Sip &amp; Pickle Wynwood</button>
+            <button class="toggle-group__nav-item">Sip &amp; Pickle Wynwood</button>
+          </div>
+
+          <div class="toggle-group__panel">
+             <div class="toggle-group__panel-group">
+                <div class="toggle-group__panel-image">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                </div>
+                <div class="toggle-group__panel-content stack gap--sm">
+                  <h3 class="heading--2">{{ i }} Exclusive event swag & prizes</h3>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </div>
+              </div>
+              <div class="toggle-group__panel-group">
+                <div class="toggle-group__panel-image">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                </div>
+                <div class="toggle-group__panel-content stack gap--sm">
+                  <h3 class="heading--2">{{ i }} Exclusive event swag & prizes</h3>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </div>
+              </div>
+              <div class="toggle-group__panel-group">
+                <div class="toggle-group__panel-image">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                </div>
+                <div class="toggle-group__panel-content stack gap--sm">
+                  <h3 class="heading--2">{{ i }} Exclusive event swag & prizes</h3>
+                  <p>Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section section--news bg--light2 border--clip">
+      <div class="container">
+        <div class="stack gap--lg">
+          <div class="stack gap--sm text-group">
+            <h2 class="heading--2">Pickleball in the spotlight</h2>
+            <p>Pickleball is the fastest growing sport globally, increasing in popularity 445% YoY. Here's what people have to say about pickleball in the news:</p>
+          </div>
+
+          <div class="carousel carousel__container">
+            <div class="carousel__list">
+                <div class="card stack gap--sm">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                  <p>
+                    <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
+                  </p>
+                  <span>
+                    <p>—Sports & Rec Weekly</p>
+                  </span>
+                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+                </div>
+                <div class="card stack gap--sm">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                  <p>
+                    <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
+                  </p>
+                  <span>
+                    <p>—Sports & Rec Weekly</p>
+                  </span>
+                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+                </div>
+                <div class="card stack gap--sm">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                  <p>
+                    <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
+                  </p>
+                  <span>
+                    <p>—Sports & Rec Weekly</p>
+                  </span>
+                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+                </div>
+                <div class="card stack gap--sm">
+                  <img src="{{ imgPrefixUrl }}images/press/Press_Image01.jpg" alt="Sports & Rec Weekly" width="325" height="161" class="border--clip border--round-sm" loading="lazy" />
+                  <p>
+                    <b>"The fastest-growing sport in America is no longer just a trend—it's a movement."</b>
+                  </p>
+                  <span>
+                    <p>—Sports & Rec Weekly</p>
+                  </span>
+                  <a href="{{ filePrefixUrl }}sign-up.html" class="link" aria-label="Read more">Read more</a>
+                </div>
+            </div>
+
+            <div class="carousel__controls">
+              <button class="prev" aria-label="Previous Card"><span>‹</span></button>
+              <button class="next" aria-label="Next Card"><span>›</span></button>
+            </div>
+
+            <div class="carousel__navigation"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="section section--cta bg--dark1">
+      <div class="container max-width--600">
+        <div class="stack gap--sm text-group">
+          <h2 class="heading--2">Don't miss out</h2>
+          <p>Join the waitlist below to sign up for more event updates and get closer to securing your spot.</p>
+          <a href="{{ filePrefixUrl }}sign-up.html" class="button" aria-label="Sign up now">Sign up now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ FILE_PREFIX }}js/index.js" defer></script>
+  <script src="{{ FILE_PREFIX }}js/navbar.js" defer></script>
+{% endblock %}
