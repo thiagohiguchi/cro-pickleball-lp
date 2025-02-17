@@ -47,7 +47,7 @@ block content
 		section#about.section.section--about.bg--light1
 			.container
 				.stack.gap--lg
-					.content.stack.gap--sm
+					.stack.gap--sm.text-group
 						h2.heading--2 What to expect
 						p The day will be filled with plenty of fun and action. Here’s what to expect:
 					
@@ -81,15 +81,56 @@ block content
 
 		section#sponsors.section.section--sponsors.bg--light4
 			.container
-				.stack.gap--sm.max-width--600.margin-x--auto.text--center
+				.stack.gap--sm.text-group
 					h2.heading--2 About our sponsors
 					p Special thanks to our sponsors who have helped make this event possible.					
+				.toggle-group
+					.toggle-group__nav
+						button.toggle-group__nav-item.toggle-group__nav-item--active Sip &amp; Pickle Wynwood
+						button.toggle-group__nav-item Sip &amp; Pickle Wynwood
+						button.toggle-group__nav-item Sip &amp; Pickle Wynwood
+							
+					.toggle-group__panel
+						.toggle-group__panel-group
+							.toggle-group__panel-image
+								img.border--clip.border--round-sm(
+								src='images/press/Press_Image01.jpg', 									
+								alt="Sports & Rec Weekly", 
+								width="325", 
+								height="161", 
+								loading="lazy"				z				)
+							.toggle-group__panel-content.stack.gap--sm
+								h3.heading--2 Exclusive event swag & prizes
+								p Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.
+						.toggle-group__panel-group
+							.toggle-group__panel-image
+								img.border--clip.border--round-sm(
+								src='images/press/Press_Image01.jpg', 									
+								alt="Sports & Rec Weekly", 
+								width="325", 
+								height="161", 
+								loading="lazy"				z				)
+							.toggle-group__panel-content.stack.gap--sm
+								h3.heading--2 Exclusive event swag & prizes
+								p Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.
+						.toggle-group__panel-group
+							.toggle-group__panel-image
+								img.border--clip.border--round-sm(
+								src='images/press/Press_Image01.jpg', 									
+								alt="Sports & Rec Weekly", 
+								width="325", 
+								height="161", 
+								loading="lazy"				z				)
+							.toggle-group__panel-content.stack.gap--sm
+								h3.heading--2 Exclusive event swag & prizes
+								p Get limited-edition tournament gear and top prizes designed for competitors who bring their best to the court.
+
 					
 
 		section#news.section.section--news.bg--light2.border--clip
 			.container
 				.stack.gap--lg
-					.stack.gap--sm.max-width--600.margin-x--auto.text--center
+					.stack.gap--sm.text-group
 						h2.heading--2 Pickleball in the spotlight
 						p Pickleball is the fastest growing sport globally, increasing in popularity 445% YoY. Here's what people have to say about pickleball in the news:
 					
@@ -120,9 +161,8 @@ block content
 
 
 		section#cta.section.section--cta.bg--dark1
-			//- img.illustration.illustration--bottom(src=imgPrefixUrl+'images/steps/illustrations--bottom.png' alt="Illustration 2" height="1432" width="1021" loading="lazy")
 			.container.max-width--600
-				.stack.gap--sm
+				.stack.gap--sm.text-group
 					h2.heading--2 Don't miss out
 					p Join the waitlist below to sign up for more event updates and get closer to securing your spot.
 					a.button(href='/sign-up.html' aria-label="Sign up now") Sign up now
