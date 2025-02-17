@@ -125,6 +125,7 @@ function devWatch() {
       baseDir: paths.dist,
     },
     port: 9000,
+    open: false,
   });
 
   watch(paths.nunjucks, compileNunjucks);
