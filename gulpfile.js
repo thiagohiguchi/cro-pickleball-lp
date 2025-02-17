@@ -1,49 +1,55 @@
-const { src, dest, series, parallel, watch } = require('gulp');
-const pug = require('gulp-pug');
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
-const minify = require('gulp-minify-css');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-const clean = require('gulp-clean');
-const rename = require('gulp-rename');
-const logger = require('gulp-logger');
-const gulpif = require('gulp-if');
-const browserSync = require('browser-sync').create();
+const { src, dest, series, parallel, watch } = require("gulp");
+const nunjucksRender = require("gulp-nunjucks-render");
+const data = require("gulp-data");
+const sass = require("gulp-sass")(require("sass"));
+const autoprefixer = require("gulp-autoprefixer");
+const minify = require("gulp-minify-css");
+const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
+const imagemin = require("gulp-imagemin");
+const clean = require("gulp-clean");
+const rename = require("gulp-rename");
+const logger = require("gulp-logger");
+const gulpif = require("gulp-if");
+const browserSync = require("browser-sync").create();
+const path = require("path");
 
 // Environment variables
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === "production";
 const _gParams = {
-  FILE_PREFIX: isProduction ? '/cro-pickleball-lp/' : '/',
-  IMG_PREFIX_URL: isProduction
-    ? 'https://thiagohiguchi.github.io/cro-pickleball-lp/'
-    : '/',
+  FILE_PREFIX: isProduction ? "/cro-pickleball-lp/" : "",
+  IMG_PREFIX_URL: isProduction ? "cro-pickleball-lp/" : "",
 };
 
 // Paths
 const paths = {
-  src: 'src',
-  dist: 'dist',
-  pug: 'src/pug/**/*.pug',
-  sass: 'src/sass/**/*.scss',
-  js: 'src/js/**/*.js',
-  images: 'src/images/**/*.{jpg,jpeg,png,gif,svg}',
-  assets: 'src/assets/**/*',
+  src: "src",
+  dist: "dist",
+  nunjucks: "src/templates/**.njk",
+  sass: "src/sass/**/*.scss",
+  js: "src/js/**/*.js",
+  images: "src/images/**/*.{jpg,jpeg,png,gif,svg}",
+  assets: "src/assets/**/*",
 };
+
+// Generate a random number and round it
+const hashValue = Math.floor(Math.random() * 1000) + 1000;
 
 // Clean the output directory
 function cleanDist() {
   return src(paths.dist, { allowEmpty: true, read: false }).pipe(clean());
 }
 
-// Compile Pug files into HTML
-function compilePug() {
-  return src(paths.pug)
+// Compile Nunjucks templates into HTML
+function compileNunjucks() {
+  return src(paths.nunjucks)
     .pipe(
-      pug({
-        pretty: !isProduction, // Minify HTML if in production mode
-        locals: _gParams, // Pass environment variables to Pug
+      data(() => _gParams) // Pass environment variables
+    )
+    .pipe(
+      nunjucksRender({
+        data: { hash: hashValue },
+        path: ["src/templates"], // Set the base directory for includes
       })
     )
     .pipe(dest(paths.dist))
@@ -55,15 +61,15 @@ function compileSass() {
   return src(paths.sass)
     .pipe(
       sass({
-        loadPaths: ['./src/sass'],
-        outputStyle: 'compressed',
+        loadPaths: ["./src/sass"],
+        outputStyle: "compressed",
         indentWidth: 0,
-      }).on('error', sass.logError) // Compile Sass
+      }).on("error", sass.logError)
     )
-    .pipe(autoprefixer('last 2 version'))
+    .pipe(autoprefixer("last 2 version"))
     .pipe(minify())
-    .pipe(rename({ suffix: '.min' })) // Add .min suffix for production builds
-    .pipe(dest(`${paths.dist}/css`, { overwrite: true })) // Overwrite existing files
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(dest(`${paths.dist}/css`, { overwrite: true }))
     .pipe(browserSync.stream());
 }
 
@@ -72,10 +78,10 @@ function compileJs() {
   return src(paths.js)
     .pipe(
       babel({
-        presets: ['@babel/preset-env'], // Transpile with Babel
+        presets: ["@babel/preset-env"],
       })
     )
-    .pipe(gulpif(isProduction, uglify())) // Minify if in production mode
+    .pipe(gulpif(isProduction, uglify()))
     .pipe(dest(`${paths.dist}/js`))
     .pipe(browserSync.stream());
 }
@@ -87,7 +93,7 @@ function optimizeImages() {
       gulpif(
         isProduction,
         logger({
-          before: 'Optimizing images, it might take a while...',
+          before: "Optimizing images, it might take a while...",
           showChange: false,
         })
       )
@@ -96,9 +102,9 @@ function optimizeImages() {
       gulpif(
         isProduction,
         imagemin([
-          imagemin.mozjpeg({ quality: 85, progressive: true }), // Lossy optimization for JPEG
-          imagemin.optipng({ optimizationLevel: 5 }), // Optimization for PNG
-          imagemin.svgo(), // Optimization for SVG
+          imagemin.mozjpeg({ quality: 85, progressive: true }),
+          imagemin.optipng({ optimizationLevel: 5 }),
+          imagemin.svgo(),
         ])
       )
     )
@@ -121,7 +127,7 @@ function devWatch() {
     port: 9000,
   });
 
-  watch(paths.pug, compilePug);
+  watch(paths.nunjucks, compileNunjucks);
   watch(paths.sass, compileSass);
   watch(paths.js, compileJs);
   watch(paths.images, optimizeImages);
@@ -131,7 +137,7 @@ function devWatch() {
 // Build task
 const build = series(
   cleanDist,
-  parallel(compilePug, compileSass, compileJs, optimizeImages, copyAssets)
+  parallel(compileNunjucks, compileSass, compileJs, optimizeImages, copyAssets)
 );
 
 // Default task
