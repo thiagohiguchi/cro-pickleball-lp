@@ -2,23 +2,27 @@
 
 ## Overview
 
-This project is a frontend test for a role at Verticurl. The objective is to replicate a provided design using **HTML**, **SASS**, **BEM**, and **VanillaJS**, while ensuring the page is responsive, interactive, and optimized for different screen sizes.
+This project is a frontend test for a role at ClassPass. The objective is to replicate a provided design using **HTML**, **SASS**, **BEM**, and **VanillaJS**, while ensuring the page is responsive, interactive, and optimized for different screen sizes.
+
+**Nunjucks** is used to provide HTML templating, making it easier to manage and reuse components across the project.
 
 **Gulp** is used in this project to automate tasks like minification and live reloading, making the development process more efficient.
 
 There are two fully functional pages, home and speakers. To simplify access, the pages have been deployed remotely.
 
-- **Home**: https://thiagohiguchi.github.io/cro-pickleball-lp/
-- **Speakers**: https://thiagohiguchi.github.io/cro-pickleball-lp/speakers.html
+- **Home**: https://thiagohiguchi.github.io/cro-pickleball-lp/index.html
+- **Sign Up**: https://thiagohiguchi.github.io/cro-pickleball-lp/sign-up.html
+- **Thank You**: https://thiagohiguchi.github.io/cro-pickleball-lp/thank-you.html
 
 Otherwise, after running the process locally, the pages are accessible throuaout the links:
 
-- **Home**: http://localhost:9000
-- **Speakers**: http://localhost:9000/speakers.html
+- **Home**: http://localhost:9000/index.html
+- **Sign Up**: http://localhost:9000/sign-up.html
+- **Thank You**: http://localhost:9000/thank-you.html
 
 ### Technologies:
 
-- **HTML Markup**: Pug
+- **HTML Markup**: Nunjucks
 - **Styles**: SASS (CSS preprocessor)
 - **JavaScript**: Vanilla JavaScript
 - **CSS Methodology**: BEM (Block-Element-Modifier)
@@ -33,9 +37,9 @@ Otherwise, after running the process locally, the pages are accessible throuaout
 
 ## Project Design & Adjustments
 
+- Although not required for the assignment, I used Nunjucks to reuse templates, minimize code duplication, improve maintainability, and streamline future updates.
 - To enhance the development experience and streamline setup, a custom Gulp configuration is provided to assist with task management.
-- As no mobile mockups were provided, a simplified version was designed to ensure proper page presentation.
-- The font used is proprietary, so Harabara and Tahoma were used as alternative font families.
+- The original fonts are proprietary, so I’ve selected free alternative font families. While the final result differs slightly from the provided designs, it can be easily updated if a font change is needed..
 - The pages are relatively simple, so a more complex architecture was not implemented.
 
 ## Requirements
@@ -56,9 +60,7 @@ git clone https://github.com/thiagohiguchi/cro-pickleball-lp.git
 cd cro-pickleball-lp
 ```
 
-### 2. Setup Node 20 and install dependencies
-
-Make sure to run Node v20, otherwise some deprecated libs might not work properly.
+### 2. Install dependencies
 
 Install the required npm dependencies:
 
@@ -84,8 +86,9 @@ This command will:
 
 - Start the local server in **development mode**
 - Open the site in your default web browser
-  - **Home**: http://localhost:9000
-  - **Speakers**: http://localhost:9000/speakers.html
+  - **Home**: http://localhost:9000/index.html
+  - **Sign Up**: http://localhost:9000/sign-up.html
+  - **Thank You**: http://localhost:9000/thank-you.html
 
 ### 4. Build the Project
 
@@ -124,7 +127,7 @@ The project is organized as follows:
 │   ├── css/                 # Global or third-party CSS files
 │   ├── images/              # Image files (JPG, PNG, GIF, etc.)
 │   ├── js/                  # JavaScript entry point and other custom scripts
-│   ├── pug/                 # Pug templates and layouts
+│   ├── nunjucks/            # Nunjucks templates and layouts
 │   └── sass/                # Sass files (includes styles for layout, components)
 └── gulpfile.js              # Gulp configuration for processing and bundling assets
 ```
@@ -138,7 +141,6 @@ The project is organized as follows:
 - [ ] Improve the Gulp configuration to prevent minifying images during every build.
 - [ ] Adopt a more efficient approach to handling images (webp, srcset, and fallback for less commonly used clients).
 - [ ] Review and optimize Sass mixins and variables for enhanced reusability and maintainability.
-- [ ] Implement lazy loading for images and other assets where applicable.
 - [ ] Ensure all HTML elements have appropriate ARIA attributes for improved accessibility.
 - [ ] Optimize meta tags and content to boost SEO performance.
 - [ ] Set up a continuous integration/continuous deployment (CI/CD) pipeline for automated testing and deployment.
