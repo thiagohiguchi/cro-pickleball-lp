@@ -3,7 +3,7 @@ const nunjucksRender = require("gulp-nunjucks-render");
 const data = require("gulp-data");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
-const minify = require("gulp-minify-css");
+const cleanCSS = require("gulp-clean-css");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
@@ -67,7 +67,7 @@ function compileSass() {
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer("last 2 version"))
-    .pipe(minify())
+    .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest(`${paths.dist}/css`, { overwrite: true }))
     .pipe(browserSync.stream());
