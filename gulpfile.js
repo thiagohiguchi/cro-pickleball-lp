@@ -15,9 +15,9 @@ const browserSync = require('browser-sync').create();
 // Environment variables
 const isProduction = process.env.NODE_ENV === 'production';
 const _gParams = {
-  FILE_PREFIX: isProduction ? '/verticurl-frontend-test/' : '/',
+  FILE_PREFIX: isProduction ? '/cro-pickleball-lp/' : '/',
   IMG_PREFIX_URL: isProduction
-    ? 'https://thiagohiguchi.github.io/verticurl-frontend-test/'
+    ? 'https://thiagohiguchi.github.io/cro-pickleball-lp/'
     : '/',
 };
 
