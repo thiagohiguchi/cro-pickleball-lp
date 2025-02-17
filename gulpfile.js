@@ -17,8 +17,8 @@ const path = require("path");
 // Environment variables
 const isProduction = process.env.NODE_ENV === "production";
 const _gParams = {
-  FILE_PREFIX: isProduction ? "/cro-pickleball-lp/" : "",
-  IMG_PREFIX_URL: isProduction ? "cro-pickleball-lp/" : "",
+  FILE_PREFIX: isProduction ? "/cro-pickleball-lp/" : "/",
+  IMG_PREFIX_URL: isProduction ? "/cro-pickleball-lp/" : "/",
 };
 
 // Paths
