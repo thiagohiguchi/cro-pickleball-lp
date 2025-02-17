@@ -7,6 +7,7 @@ const cleanCSS = require("gulp-clean-css");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
+const htmlmin = require("gulp-htmlmin");
 const clean = require("gulp-clean");
 const rename = require("gulp-rename");
 const logger = require("gulp-logger");
@@ -51,6 +52,17 @@ function compileNunjucks() {
         data: { hash: hashValue },
         path: ["src/templates"], // Set the base directory for includes
       })
+    )
+    .pipe(
+      gulpif(
+        isProduction,
+        htmlmin({
+          collapseWhitespace: true, // Remove extra spaces
+          removeComments: true, // Remove comments
+          minifyJS: true, // Minify inline JS
+          minifyCSS: true, // Minify inline CSS
+        })
+      )
     )
     .pipe(dest(paths.dist))
     .pipe(browserSync.stream());
