@@ -1,33 +1,32 @@
 // HERO FADE EFFECT
 document.addEventListener("DOMContentLoaded", () => {
   function cycleFadeEffect() {
-    const items = document.querySelectorAll('.mosaic__item');
-    const numOfItemsToFade = Math.floor(Math.random() * 2) + 1;  // Random number between 1 and 2 (less than 3)
-    
+    const items = document.querySelectorAll(".mosaic__item");
+    const numOfItemsToFade = Math.floor(Math.random() * 2) + 1; // Random number between 1 and 2 (less than 3)
+
     // Ensure previously hidden items are visible again before selecting new ones
-    items.forEach(item => item.classList.remove('mosaic__item--fade'));
-  
+    items.forEach((item) => item.classList.remove("mosaic__item--fade"));
+
     const randomItems = [];
-    
+
     // Randomly select `numOfItemsToFade` elements to hide
     while (randomItems.length < numOfItemsToFade) {
       const randomIndex = Math.floor(Math.random() * items.length);
       const randomItem = items[randomIndex];
-      
+
       if (!randomItems.includes(randomItem)) {
         randomItems.push(randomItem);
       }
     }
-  
+
     // Apply fade-out to the selected items
-    randomItems.forEach(item => {
-      item.classList.add('mosaic__item--fade');
+    randomItems.forEach((item) => {
+      item.classList.add("mosaic__item--fade");
     });
   }
-  
+
   // Trigger the cycle every 3 seconds
   setInterval(cycleFadeEffect, 2500);
-  
 });
 
 // LOGOS INFINITE SLIDER
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   slideContainer.innerHTML += slideContent; // Duplicate content for smooth looping
 
   let position = 0;
-  const speed = 0.8; 
+  const speed = 0.8;
 
   function animate() {
     position -= speed;
@@ -50,33 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
   animate();
 });
 
-
 // TOGGLE GROUP PANEL
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleNavItems = document.querySelectorAll('.toggle-group__nav-item');
-  const panels = document.querySelectorAll('.toggle-group__panel-group');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleNavItems = document.querySelectorAll(".toggle-group__nav-item");
+  const panels = document.querySelectorAll(".toggle-group__panel-group");
 
   // Set the initial active panel
-  panels[0].classList.add('active');
-  toggleNavItems[0].classList.add('toggle-group__nav-item--active');
+  panels[0].classList.add("active");
+  toggleNavItems[0].classList.add("toggle-group__nav-item--active");
 
   toggleNavItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.addEventListener("click", () => {
       // Remove active class from all nav items and panels
       toggleNavItems.forEach((navItem) => {
-        navItem.classList.remove('toggle-group__nav-item--active');
+        navItem.classList.remove("toggle-group__nav-item--active");
       });
       panels.forEach((panel) => {
-        panel.classList.remove('active');
+        panel.classList.remove("active");
       });
 
       // Add active class to the clicked item and corresponding panel
-      item.classList.add('toggle-group__nav-item--active');
-      panels[index].classList.add('active');
+      item.classList.add("toggle-group__nav-item--active");
+      panels[index].classList.add("active");
     });
   });
 });
-
 
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", () => {
@@ -89,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let numVisibleCards = getVisibleCards();
   let touchStartX = 0;
   let touchEndX = 0;
-  
+
   if (!track || cards.length === 0) {
     console.error("Carousel elements not found.");
     return;
@@ -124,14 +121,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const maxIndex = Math.ceil(cards.length / numVisibleCards) - 1;
     const trackWidth = track.getBoundingClientRect().width;
     index = Math.min(index, maxIndex);
-    
-    let offset = -index * ((cards[0].offsetWidth * numVisibleCards) + 32);
-    
-    if(numVisibleCards > 1 && offset != 0){
+
+    let offset = -index * (cards[0].offsetWidth * numVisibleCards + 32);
+
+    if (numVisibleCards > 1 && offset != 0) {
       offset = -index * (cards[0].offsetWidth - 50 - 32);
     }
 
-    
     track.style.transform = `translateX(${offset}px)`;
     updateNavigation();
   }
